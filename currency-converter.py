@@ -1,5 +1,28 @@
 
 
+# ### Description
+# Converts a value to another currency using the https://exchangeratesapi.io API.
+
+# ### Sample Usage
+
+# =FLEX(":team/currency-convert",A10,$A$1,$A$2)<br>
+# =FLEX(":team/currency-convert",A10,$A$1,$A$2,"2019-01-31)<br>
+# =FLEX(":team/currency-convert",100,"USD","EUR","2019-01-31")<br>
+
+# ### Syntax
+
+# FLEX("microsofttest/currency-convert", amt, cur1, cur2, [date])
+
+# Property | Type | Description
+# ---------- | ---------- | ----------
+# `amt` | number | The value to convert from one currency to another
+# `cur1` | string | The currency to convert from (e.g. "USD", "EUR")
+# `cur2` | string | The currency to convert to (e.g. "USD", "EUR")
+# `[date]` | string | (optional) The exchange rate date in YYYY-DD-MM format.
+
+####################
+
+
 # exchange rates for current and historical foreign exchange rates
 # https://exchangeratesapi.io
 
