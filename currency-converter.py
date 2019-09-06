@@ -1,29 +1,34 @@
 
 # ---
-# name: currency-converter
-# description: |
-#
-#   ### Description
-#   Converts a value to another currency using the https://exchangeratesapi.io API.
-#
-#   ### Sample Usage
-#
-#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2)
-#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2,"2019-01-31)
-#   =FLEX(":team/currency-convert",100,"USD","EUR","2019-01-31")
-#
-#   ### Syntax
-#
-#   FLEX(":team/currency-convert", amt, cur1, cur2, [date])
-#
-#   Property | Type | Description
-#   ---------- | ---------- | ----------
-#   `amt` | number | The value to convert from one currency to another
-#   `cur1` | string | The currency to convert from (e.g. "USD", "EUR")
-#   `cur2` | string | The currency to convert to (e.g. "USD", "EUR")
-#   `[date]` | string | (optional) The exchange rate date in YYYY-DD-MM format.
-#
+# name: data-currencyconverter
 # deployed: true
+# title: Currency Converter
+# description: Converts a value to another currency
+# params:
+# - name: amt
+#   type: cur1
+#   description: The value to convert from one currency to another
+#   required: true
+# - name: cur1
+#   type: number
+#   description: The currency type to convert from
+#   required: true
+# - name: cur2
+#   type: number
+#   description: The currency type to convert to
+#   required: true
+# - name: date
+#   type: date
+#   description: The exchange rate date in YYYY-DD-MM format
+#   required: false
+# examples:
+# - 100, "USD", "EUR"
+# - 200, "EUR", "USD", "2018-12-31"
+# - A1, B1, C1
+# notes: |-
+#   This function uses the https://exchangeratesapi.io API to convert the rates from one into another.
+#
+#   The following currency types are allowed: CAD, HKD, ISK, PHP, DKK, HUF, CZK, GBP, RON, SEK, IDR, INR, BRL, RUB, HRK, JPY, THB, CHF, EUR, MYR, BGN, TRY, CNY, NOK, NZD, ZAR, USD, MXN, SGD, AUD, ILS, KRW, PLN
 # ---
 
 
