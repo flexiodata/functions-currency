@@ -1,6 +1,6 @@
 
 # ---
-# name: data-currencyconverter
+# name: currency-converter
 # deployed: true
 # title: Currency Converter
 # description: Converts a currency amount from one currency type to another
