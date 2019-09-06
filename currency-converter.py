@@ -1,16 +1,16 @@
 
 # ---
 # name: currency-converter
-# description: |2
+# description: >
 #
 #   ### Description
 #   Converts a value to another currency using the https://exchangeratesapi.io API.
 #
 #   ### Sample Usage
 #
-#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2)<br>
-#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2,"2019-01-31)<br>
-#   =FLEX(":team/currency-convert",100,"USD","EUR","2019-01-31")<br>
+#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2)
+#   =FLEX(":team/currency-convert",A10,\$A$1,\$A$2,"2019-01-31)
+#   =FLEX(":team/currency-convert",100,"USD","EUR","2019-01-31")
 #
 #   ### Syntax
 #
