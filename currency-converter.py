@@ -1,7 +1,7 @@
 
 # ---
 # name: currency-converter
-# description: >
+# description: |
 #
 #   ### Description
 #   Converts a value to another currency using the https://exchangeratesapi.io API.
