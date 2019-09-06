@@ -3,7 +3,7 @@
 # name: data-currencyconverter
 # deployed: true
 # title: Currency Converter
-# description: Converts a value to another currency
+# description: Converts a currency amount from one currency type to another
 # params:
 # - name: amt
 #   type: cur1
