@@ -29,6 +29,7 @@ import requests
 from datetime import *
 from cerberus import Validator
 from collections import OrderedDict
+from operator import itemgetter
 
 # main function entry point
 def flexio_handler(flex):
@@ -69,12 +70,13 @@ def getresult(flex):
         response = requests.get(url)
         rates = response.json()['rates']
 
-        result = list()
-        result.append(['currency','amount'])
-
+        items = list()
         for currency, amount in rates.items():
-            result.append([currency, amount])
+            items.append([currency, amount])
+        items = sorted(items, key=itemgetter(0))
 
+        result = [['currency','amount']]
+        result.extend(items)
         flex.output.write(result)
 
     except:
