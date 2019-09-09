@@ -14,8 +14,8 @@
 #   description: The exchange rate date in YYYY-DD-MM format
 #   required: false
 # examples:
-# - "USD"
-# - "EUR", "2018-12-31"
+# - \"USD\"
+# - \"EUR\", \"2018-12-31\"
 # - A1, B1
 # notes: |-
 #   This function uses the https://exchangeratesapi.io API to list the rates.
