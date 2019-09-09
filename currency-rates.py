@@ -18,7 +18,7 @@
 # - "EUR", "2018-12-31"
 # - A1, B1
 # notes: |-
-#   This function uses the https://exchangeratesapi.io API to convert the rates from one into another.
+#   This function uses the https://exchangeratesapi.io API to list the rates.
 #
 #   The following currency types are allowed: CAD, HKD, ISK, PHP, DKK, HUF, CZK, GBP, RON, SEK, IDR, INR, BRL, RUB, HRK, JPY, THB, CHF, EUR, MYR, BGN, TRY, CNY, NOK, NZD, ZAR, USD, MXN, SGD, AUD, ILS, KRW, PLN
 # ---
