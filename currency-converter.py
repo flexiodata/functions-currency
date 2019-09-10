@@ -6,7 +6,7 @@
 # description: Converts a currency amount from one currency type to another
 # params:
 # - name: amt
-#   type: cur1
+#   type: number
 #   description: The value to convert from one currency to another
 #   required: true
 # - name: cur1
@@ -56,7 +56,7 @@ def getresult(flex):
     # define the expected parameters and map the values to the parameter names
     # based on the positions of the keys/values
     params = OrderedDict()
-    params['amt'] = {'required': True, 'type': 'number'}
+    params['amt'] = {'required': True, 'type': 'number', 'coerce': float}
     params['cur1'] = {'required': True, 'validator': validate_currency, 'coerce': lambda s: s.upper()}
     params['cur2'] = {'required': True, 'validator': validate_currency, 'coerce': lambda s: s.upper()}
     params['date'] = {'required': False, 'type': 'date', 'coerce': lambda s: datetime.strptime(s, '%Y-%m-%d')}
