@@ -10,11 +10,11 @@
 #   description: The value to convert from one currency to another
 #   required: true
 # - name: cur1
-#   type: number
+#   type: string
 #   description: The currency type to convert from
 #   required: true
 # - name: cur2
-#   type: number
+#   type: string
 #   description: The currency type to convert to
 #   required: true
 # - name: date
