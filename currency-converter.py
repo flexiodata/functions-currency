@@ -83,7 +83,7 @@ def getresult(flex):
         rates = response.json()['rates']
 
         conversion_rate = rates[input['cur2']]
-        return input['amt']*conversion_rate
+        return [[input['amt']*conversion_rate]]
 
     except:
         raise RuntimeError
