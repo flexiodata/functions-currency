@@ -22,9 +22,9 @@
 #   description: The exchange rate date in YYYY-DD-MM format
 #   required: false
 # examples:
-# - "100, \"USD\", \"EUR\""
-# - "200, \"EUR\", \"USD\", \"2018-12-31\""
-# - A1, B1, C1
+# - '100, "USD", "EUR"'
+# - '200, "EUR", "USD", "2018-12-31"'
+# - 'A1, B1, C1'
 # notes: |-
 #   This function uses the https://exchangeratesapi.io API to convert the rates from one into another.
 #
@@ -40,10 +40,6 @@ from collections import OrderedDict
 
 # main function entry point
 def flexio_handler(flex):
-    result = getresult(flex)
-    flex.output.write(result)
-
-def getresult(flex):
 
     # get the input
     input = flex.input.read()
@@ -83,7 +79,10 @@ def getresult(flex):
         rates = response.json()['rates']
 
         conversion_rate = rates[input['cur2']]
-        return [[input['amt']*conversion_rate]]
+        result = [[input['amt']*conversion_rate]]
+
+        flex.output.content_type = "application/json"
+        flex.output.write(result)
 
     except:
         raise RuntimeError
