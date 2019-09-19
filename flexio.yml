@@ -5,5 +5,4 @@ image:
   src:
   alt:
 
-params:
-
+prompts: []
