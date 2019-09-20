@@ -4,5 +4,7 @@ description: Functions for accessing and converting between currencies
 image:
   src: https://logo.clearbit.com/zentral-bank.eu
   alt: Zentral Bank logo
-
+functions:
+- path: currency-converter.py
+- path: currency-rates.py
 prompts: []
