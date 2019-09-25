@@ -5,26 +5,26 @@
 # title: Currency Converter
 # description: Converts a currency amount from one currency type to another
 # params:
-# - name: amt
-#   type: number
-#   description: The value to convert from one currency to another
-#   required: true
-# - name: cur1
-#   type: string
-#   description: The currency type to convert from
-#   required: true
-# - name: cur2
-#   type: string
-#   description: The currency type to convert to
-#   required: true
-# - name: date
-#   type: date
-#   description: The exchange rate date in YYYY-DD-MM format
-#   required: false
+#   - name: amt
+#     type: number
+#     description: The value to convert from one currency to another
+#     required: true
+#   - name: cur1
+#     type: string
+#     description: The currency type to convert from
+#     required: true
+#   - name: cur2
+#     type: string
+#     description: The currency type to convert to
+#     required: true
+#   - name: date
+#     type: date
+#     description: The exchange rate date in YYYY-DD-MM format
+#     required: false
 # examples:
-# - '100, "USD", "EUR"'
-# - '200, "EUR", "USD", "2018-12-31"'
-# - 'A1, B1, C1'
+#   - '100, "USD", "EUR"'
+#   - '200, "EUR", "USD", "2018-12-31"'
+#   - 'A1, B1, C1'
 # notes: |-
 #   This function uses the https://exchangeratesapi.io API to convert the rates from one into another.
 #
