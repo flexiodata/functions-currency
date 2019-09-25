@@ -5,18 +5,18 @@
 # title: Currency Rates
 # description: Lists the currency exchange rates for a particular currency and date
 # params:
-# - name: cur
-#   type: string
-#   description: The currency type to use as the base
-#   required: true
-# - name: date
-#   type: date
-#   description: The exchange rate date in YYYY-DD-MM format
-#   required: false
+#   - name: cur
+#     type: string
+#     description: The currency type to use as the base
+#     required: true
+#   - name: date
+#     type: date
+#     description: The exchange rate date in YYYY-DD-MM format
+#     required: false
 # examples:
-# - '"USD"'
-# - '"EUR", "2018-12-31"'
-# - 'A1, B1'
+#   - '"USD"'
+#   - '"EUR", "2018-12-31"'
+#   - 'A1, B1'
 # notes: |-
 #   This function uses the https://exchangeratesapi.io API to list the rates.
 #
