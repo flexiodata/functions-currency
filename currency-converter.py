@@ -19,7 +19,7 @@
 #     required: true
 #   - name: date
 #     type: date
-#     description: The exchange rate date in YYYY-DD-MM format
+#     description: The exchange rate date
 #     required: false
 # examples:
 #   - '100, "USD", "EUR"'
@@ -55,7 +55,7 @@ def flexio_handler(flex):
     params['amt'] = {'required': True, 'type': 'number', 'coerce': float}
     params['cur1'] = {'required': True, 'validator': validate_currency, 'coerce': lambda s: s.upper()}
     params['cur2'] = {'required': True, 'validator': validate_currency, 'coerce': lambda s: s.upper()}
-    params['date'] = {'required': False, 'type': 'date', 'coerce': lambda s: datetime.strptime(s, '%Y-%m-%d')}
+    params['date'] = {'required': False, 'type': 'date', 'coerce': to_date}
     input = dict(zip(params.keys(), input))
 
     # validate the mapped input against the validator
@@ -89,7 +89,6 @@ def flexio_handler(flex):
 
 
 def validate_currency(field, value, error):
-
     currency_types = [
         'CAD','HKD','ISK','PHP','DKK','HUF','CZK','GBP','RON','SEK',
         'IDR','INR','BRL','RUB','HRK','JPY','THB','CHF','EUR','MYR',
@@ -98,5 +97,13 @@ def validate_currency(field, value, error):
     ]
     if any(value in c for c in currency_types):
         return
-
     error(field, 'is an invalid currency type')
+
+def to_date(value):
+    # if we have a number, treat it as numeric date value from
+    # a spreadsheet (days since 1900; e.g. 1 is 1900-01-01)
+    if isinstance(value, (int, float)):
+        return datetime(1900,1,1) + timedelta(days=(value-1))
+    if isinstance(value, str):
+        return datetime.strptime(value, '%Y-%m-%d')
+    return value
