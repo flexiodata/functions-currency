@@ -2,8 +2,8 @@
 # ---
 # name: currency-rates
 # deployed: true
-# title: Currency Rates
-# description: Lists the currency exchange rates for a particular currency and date
+# title: Currency Exchange Rates
+# description: Returns a list of currency exchange rates for a particular currency and date
 # params:
 #   - name: cur
 #     type: string

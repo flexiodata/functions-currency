@@ -3,7 +3,7 @@
 # name: currency-converter
 # deployed: true
 # title: Currency Converter
-# description: Converts a currency amount from one currency type to another
+# description: Returns an amount in one currency type from an amount in another currency type
 # params:
 #   - name: amt
 #     type: number
