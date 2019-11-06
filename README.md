@@ -32,7 +32,7 @@ To get the Flex.io Google Sheets Add-on:
 3. In the Add-on dialog, search for "Flex.io" in the search bar
 4. Finally, click the button next to the Flex.io Google Sheets Add-on listing
 
-For more information see [Flex.io Add-ons](https://www.flex.io/add-ons)
+For more information, see [Flex.io Add-ons.](https://www.flex.io/add-ons)
 
 ### Use the functions in your spreadsheet
 
