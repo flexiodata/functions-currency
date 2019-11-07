@@ -1,56 +1,95 @@
-# Currency Conversion Spreadsheet Functions
+# Currency Spreadsheet Functions
 
-These currency conversion functions enable you to list currency rates and convert currency amounts in Microsoft Excel and Google Sheets. These functions utilize the [European Central Bank exchange rates API](https://exchangeratesapi.io) for current and historical foreign exchange rates and [Flex.io](https://www.flex.io) to run the functions and return the results to the spreadsheet. See the [function documentation](https://www.flex.io/integrations/currency#functions-and-syntax) for a list of the functions available and the spreadsheet syntax to use them.
+Currency Spreadsheet Functions enables you to list currency conversion rates between different currencies and convert between them. The rates used are published by the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) and available through the [Foreign Exchange Rates API](https://exchangeratesapi.io/_
 
-## Getting Started
+Here are some examples:
 
-### Install the functions in Flex.io
+```
+=FLEX("YOUR_TEAM_NAME/currency-converter", 100, "EUR", "USD", "2018-12-31")
+114.5
+```
 
-To install the functions in Flex.io:
+```
+=FLEX("YOUR_TEAM_NAME/currency-rates", "EUR", "2018-12-31")
+currency	amount
+AUD	1.622
+BGN	1.9558
+BRL	4.444
+CAD	1.5605
+CHF	1.1269
+CNY	7.8751
+CZK	25.724
+DKK	7.4673
+GBP	0.89453
+HKD	8.9675
+HRK	7.4125
+HUF	320.98
+IDR	16500
+ILS	4.2972
+INR	79.7298
+ISK	133.2
+JPY	125.85
+KRW	1277.93
+MXN	22.4921
+MYR	4.7317
+NOK	9.9483
+NZD	1.7056
+PHP	60.113
+PLN	4.3014
+RON	4.6635
+RUB	79.7153
+SEK	10.2548
+SGD	1.5591
+THB	37.052
+TRY	6.0588
+USD	1.145
+ZAR	16.4594
+```
+
+## Prerequisites
+
+The Currency Spreadsheet Functions are powered by [Flex.io](https://www.flex.io). To use these functions, you'll need:
+
+* A [Flex.io account](https://www.flex.io/app/signup) to run the functions
+* A [Flex.io Add-on](https://www.flex.io/add-ons) for Microsoft Excel or Google Sheets use the functions in your spreadsheet
+
+## Installing the Functions
+
+Once you've signed up for Flex.io and have the Flex.io Add-on installed, you're ready to install the function pack.
+
+You can install these functions directly by mounting this repository in Flex.io:
 
 1. [Sign in](https://www.flex.io/app/signin) to Flex.io
 2. In the Functions area, click the "New" button in the upper-left and select "Function Mount" from the list
 3. In the function mount dialog, select "GitHub", then authenticate with your GitHub account
-4. In the respository URL box, enter "flexiodata/functions-currency"
+4. In the respository URL box, enter the name of this repository, which is "flexiodata/functions-currency"
 5. Click "Create Function Mount"
 
-If you like, you can also view and test the functions in Flex.io by clicking on one of the functions in the function list and clicking "Test" to test it.
+If you prefer, you can also install these using the [Flex.io Currency Integration](https://www.flex.io/integrations/currency).
 
-### Get the Flex.io Add-on for Microsoft Excel or Google Sheets
+## Using the Functions
 
-To get the Flex.io Microsoft Excel Add-on:
+Once you've installed the function pack, you're ready to use the functions.
 
-1. Open Microsoft Excel (Office 365)
-2. In Microsoft Excel, click on the "Insert" menu and select the "Get Add-ins" menu item
-3. In the Office Add-ins dialog, search for "Flex.io" in the search bar in the Store area
-4. Click the "Add" button next to the Flex.io Excel Add-in listing
-
-To get the Flex.io Google Sheets Add-on:
-
-1. Open Google Sheets
-2. In Google Sheets, click on the "Add-ons" menu and select the "Get Add-ons" menu item
-3. In the Add-on dialog, search for "Flex.io" in the search bar
-4. Finally, click the button next to the Flex.io Google Sheets Add-on listing
-
-For more information, see [Flex.io Add-ons.](https://www.flex.io/add-ons)
-
-### Use the functions in your spreadsheet
-
-To use the functions in Microsoft Excel:
-
-1. Open Microsoft Excel
-2. Select Home->Show Flex.io Sidebar (click on the icon on the far right of the Home toolbar)
+1. Open Microsoft Excel or Google Sheets
+2. Open the Flex.io Add-in:
+   - In Microsoft Excel, select Home->Flex.io
+   - In Google Sheets, select Add-ons->Flex.io
 3. In the Flex.io side bar, log in to Flex.io and you’ll see the functions you have installed
 4. For any function, click on the “details” in the function list to open a help dialog with some examples you can try at the bottom
 5. Simply copy/paste the function into a cell, then edit the formula with a value you want to use
 
-To use the functions in Google Sheets:
+## Documentation
 
-1. Open Google Sheets
-2. Select Add-ons->Flex.io->Show Sidebar
-2. In the Flex.io side bar, log in to Flex.io and you’ll see the functions you have installed
-3. For any function, click on the “details” in the function list to open a help dialog with some examples you can try at the bottom
-4. Simply copy/paste the function into a cell, then edit the formula with a value you want to use
+Here are some additional resources:
+
+* [Currency Function Documentation.](https://www.flex.io/integrations/currency#functions-and-syntax) Here, you'll find a list of the functions available, their syntax and parameters, as well as examples for how to use them.
+* [Flex.io Add-ons.](https://www.flex.io/add-ons) Here, you'll find more information about the Flex.io Add-ons for Microsoft Excel and Google Sheets, including how to install them and use them.
+* [Flex.io Integrations.](https://www.flex.io/integrations) Here, you'll find out more information about other spreadsheet function packs available.
+
+## Help
+
+If you have question or would like more information, please feel free to live chat with us at our [website](https://www.flex.io) or [contact us](https://www.flex.io/about#contact-us) via email.
 
 ## License
 
