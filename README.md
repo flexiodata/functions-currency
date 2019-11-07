@@ -51,7 +51,7 @@ ZAR	16.4594
 The Currency Spreadsheet Functions are powered by [Flex.io](https://www.flex.io). To use these functions, you'll need:
 
 * A [Flex.io account](https://www.flex.io/app/signup) to run the functions
-* A [Flex.io Add-on](https://www.flex.io/add-ons) for Microsoft Excel or Google Sheets use the functions in your spreadsheet
+* A [Flex.io Add-on](https://www.flex.io/add-ons) for Microsoft Excel or Google Sheets to use the functions in your spreadsheet
 
 ## Installing the Functions
 
