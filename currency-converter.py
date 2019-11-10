@@ -72,7 +72,9 @@ def flexio_handler(flex):
             date = input['date'].strftime('%Y-%m-%d')
 
         if input['cur1'] == input['cur2']:
-            return [[input['amt']]]
+            flex.output.content_type = "application/json"
+            flex.output.write([[input['amt']]])
+            return
 
         url = 'https://api.exchangeratesapi.io/'+date+'?base=' + input['cur1']
         response = requests.get(url)
