@@ -1,6 +1,6 @@
 # Currency Spreadsheet Functions
 
-Currency Spreadsheet Functions enables you to list currency conversion rates between different currencies and convert between them. The rates used are published by the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) and available through the [Foreign Exchange Rates API](https://exchangeratesapi.io/_
+Currency Spreadsheet Functions enables you to list currency conversion rates between different currencies and convert between them. The rates used are published by the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) and available through the [Foreign Exchange Rates API](https://exchangeratesapi.io/).
 
 Here are some examples:
 
