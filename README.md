@@ -1,6 +1,11 @@
-# Currency Spreadsheet Functions
+# Currency Conversion Google Sheets and Excel Spreadsheet Add on
 
-Currency Spreadsheet Functions enables you to list currency conversion rates between different currencies and convert between them. The rates used are published by the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) and available through the [Foreign Exchange Rates API](https://exchangeratesapi.io/).
+This Foreign Exchange Currency Conversion utility uses rates published by the European Central Bank and available through the [Foreign Exchange Rates API](https://exchangeratesapi.io/). This Currency Conversion spreadsheet integration for Google Sheets and Microsoft Excel enables you to convert currencies as well as list currency rates. This add-on will enable you to integrate on-demand, refreshable currency conversion without leaving your spreadsheet.
+
+For example, with this Excel and Google Sheets add-on you can:
+
+* Convert a currency amount to another currency, at current rate or rate based on a historic date.
+* List foreign exchange rates for a basket of different currencies, at the current rates or based on a historic date.
 
 Here are some examples:
 
