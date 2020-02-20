@@ -13,6 +13,13 @@
 #     type: date
 #     description: The exchange rate date
 #     required: false
+# returns:
+#   - name: currency
+#     type: string
+#     description: The type of currency
+#   - name: amount
+#     type: numeric
+#     description: The currency exchange rate
 # examples:
 #   - '"USD"'
 #   - '"EUR", "2018-12-31"'

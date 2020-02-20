@@ -21,6 +21,10 @@
 #     type: date
 #     description: The exchange rate date
 #     required: false
+# returns:
+#   - name: amount
+#     type: numeric
+#     description: The converted currency amount
 # examples:
 #   - '100, "USD", "EUR"'
 #   - '200, "EUR", "USD", "2018-12-31"'
