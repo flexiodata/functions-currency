@@ -71,7 +71,7 @@ def flexio_handler(flex):
 
     try:
 
-        date = 'latest';
+        date = 'latest'
         if 'date' in input.keys():
             date = input['date'].strftime('%Y-%m-%d')
 
