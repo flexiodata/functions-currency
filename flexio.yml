@@ -1,9 +1,35 @@
 title: Currency
 description: Functions for accessing and converting between currencies
+
 image:
   src: https://static.flex.io/assets/logos2/currency.png
   alt: Zentral Bank logo
+
 functions:
   - path: currency-converter.py
   - path: currency-rates.py
+
+templates:
+  - name: convert-currency-amounts
+    title: 'Convert currency amounts'
+    description: 'Convert currency amounts using current or historical exchange rates'
+    gsheets_spreadsheet_id: ''
+    excel_spreadsheet_path: ''
+    in_production: false
+    in_staging: false
+  - name: lookup-currency-exchange-rates
+    title: 'Lookup currency exchange rates'
+    description: 'Import currency exchange rates published by the European Central Bank'
+    gsheets_spreadsheet_id: ''
+    excel_spreadsheet_path: ''
+    in_production: false
+    in_staging: false
+  - name: compare-historical-exchange-rates
+    title: 'Compare historical exchange rates'
+    description: 'Impot and compare historical exchange rates between a set of currencies'
+    gsheets_spreadsheet_id: ''
+    excel_spreadsheet_path: ''
+    in_production: false
+    in_staging: false
+
 prompts: []
