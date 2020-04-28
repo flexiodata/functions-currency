@@ -35,9 +35,10 @@
 #   The following currency types are allowed: CAD, HKD, ISK, PHP, DKK, HUF, CZK, GBP, RON, SEK, IDR, INR, BRL, RUB, HRK, JPY, THB, CHF, EUR, MYR, BGN, TRY, CNY, NOK, NZD, ZAR, USD, MXN, SGD, AUD, ILS, KRW, PLN
 # ---
 
-
 import json
 import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 from datetime import *
 from cerberus import Validator
 from collections import OrderedDict
@@ -81,7 +82,7 @@ def flexio_handler(flex):
             return
 
         url = 'https://api.exchangeratesapi.io/'+date+'?base=' + input['cur1']
-        response = requests.get(url)
+        response = requests_retry_session().get(url)
         rates = response.json()['rates']
 
         conversion_rate = rates[input['cur2']]
@@ -93,6 +94,24 @@ def flexio_handler(flex):
     except:
         raise RuntimeError
 
+def requests_retry_session(
+    retries=3,
+    backoff_factor=0.3,
+    status_forcelist=(500, 502, 504),
+    session=None,
+):
+    session = session or requests.Session()
+    retry = Retry(
+        total=retries,
+        read=retries,
+        connect=retries,
+        backoff_factor=backoff_factor,
+        status_forcelist=status_forcelist,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    return session
 
 def validate_currency(field, value, error):
     currency_types = [
