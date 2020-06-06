@@ -15,21 +15,21 @@ templates:
     description: 'Convert currency amounts using current or historical exchange rates'
     gsheets_spreadsheet_id: ''
     excel_spreadsheet_path: ''
-    in_production: false
-    in_staging: false
+    is_public: false
+    is_private: false
   - name: lookup-currency-exchange-rates
     title: 'Lookup currency exchange rates'
     description: 'Import currency exchange rates published by the European Central Bank'
     gsheets_spreadsheet_id: ''
     excel_spreadsheet_path: ''
-    in_production: false
-    in_staging: false
+    is_public: false
+    is_private: false
   - name: compare-historical-exchange-rates
     title: 'Compare historical exchange rates'
     description: 'Impot and compare historical exchange rates between a set of currencies'
     gsheets_spreadsheet_id: ''
     excel_spreadsheet_path: ''
-    in_production: false
-    in_staging: false
+    is_public: false
+    is_private: false
 
 prompts: []
