@@ -70,29 +70,24 @@ def flexio_handler(flex):
     if input is None:
         raise ValueError
 
-    try:
+    date = 'latest'
+    if 'date' in input.keys():
+        date = input['date'].strftime('%Y-%m-%d')
 
-        date = 'latest'
-        if 'date' in input.keys():
-            date = input['date'].strftime('%Y-%m-%d')
-
-        if input['cur1'] == input['cur2']:
-            flex.output.content_type = "application/json"
-            flex.output.write([[input['amt']]])
-            return
-
-        url = 'https://api.exchangeratesapi.io/'+date+'?base=' + input['cur1']
-        response = requests_retry_session().get(url)
-        rates = response.json()['rates']
-
-        conversion_rate = rates[input['cur2']]
-        result = [[input['amt']*conversion_rate]]
-
+    if input['cur1'] == input['cur2']:
         flex.output.content_type = "application/json"
-        flex.output.write(result)
+        flex.output.write([[input['amt']]])
+        return
 
-    except:
-        raise RuntimeError
+    url = 'https://api.exchangeratesapi.io/'+date+'?base=' + input['cur1']
+    response = requests_retry_session().get(url)
+    rates = response.json()['rates']
+
+    conversion_rate = rates[input['cur2']]
+    result = [[input['amt']*conversion_rate]]
+
+    flex.output.content_type = "application/json"
+    flex.output.write(result)
 
 def requests_retry_session(
     retries=3,
