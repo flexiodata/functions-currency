@@ -64,7 +64,7 @@ def flexio_handler(flex):
     if input is None:
         raise ValueError
 
-    date = 'latest';
+    date = 'latest'
     if 'date' in input.keys():
         date = input['date'].strftime('%Y-%m-%d')
 
